@@ -1,4 +1,6 @@
-def sorting(words, amount):
+#The main sorting algorithm
+
+def sorting(words):
     for x in words[0:]:
         for y in words[1:]:
             if x > y:
@@ -9,15 +11,15 @@ def sorting(words, amount):
                 words.remove(y)
     return words
 
+#User inputs for the words
 assortment = []
-numbermade = 0
 print("If you don't want anymore words, type \"nst\" to exit")
 while 1 == 1:
     choice = str(input("What word would you like to put in?"))
     if choice != "nst":
         assortment.append(choice)
-        numbermade = numbermade+1
     else:
         break
 
-print(sorting(assortment, numbermade))
+result=sorting(assortment)
+print(result)
